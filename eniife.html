@@ -7,7 +7,26 @@
 </head>
 <body>
     <h1>Myself</h1>
+    <p id="demo"></p>
+    <button onclick="document.getElementById('demo').innerHTML = new Date()">Show date</button>
+    <p id="show-count">1</p>
+    <p id="bio"></p>
+    <button onclick="count()">Count</button>
+    <button onclick="greet()">Greet user</button>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eveniet enim possimus sequi delectus illum, in fugit, voluptatibus hic a unde animi blanditiis aliquam repellat molestias, officia perspiciatis soluta minima?g</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod architecto error autem laudantium ratione! Atque, quis. Vel aliquam voluptas cumque error reiciendis corrupti esse fugit minima iste commodi, ab magnam.</p>
+
+
+    <script>
+      function count() {
+       let countNum =  document.getElementById("show-count")
+       countNum.innerHTML = Number(countNum.innerHTML) + 1
+      }
+
+
+
+
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
