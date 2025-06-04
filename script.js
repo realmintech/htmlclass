@@ -144,7 +144,29 @@ if(score >= 70) {
 }
 
 
+// FORM VALIDATION
+let emailInput = document.getElementById("email")
+let result = document.getElementById("res");
+function registration() {
+//  if((emailInput.value).includes("@") && (emailInput.value).includes(".") ){
+//     result.innerHTML = "Valid email"
+//     result.style.color = "green"
+//  } else {
+//   result.innerHTML = "Invalid email"
+//   result.style.color = "red"
+//  }
 
+// REGEX FOR EMAIL VALIDATION
+const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let req = regex.test(emailInput.value)
+if(req) {
+  result.innerHTML = "Valid email"
+} else {
+  result.innerHTML = "Invalid email"
+}
+
+
+}
 
 
 
