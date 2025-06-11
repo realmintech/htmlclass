@@ -103,76 +103,140 @@
 // console.log(novel.at(10));
 
 
-// STRING SEARCH METHOD
-let school = "Uniosun is a university in Osogbo. It is located at Osogbo."
-console.log(school.indexOf("is"));
-console.log(school.lastIndexOf("is"));
+// // STRING SEARCH METHOD
+// let school = "Uniosun is a university in Osogbo. It is located at Osogbo."
+// console.log(school.indexOf("is"));
+// console.log(school.lastIndexOf("is"));
 
-console.log(school.search());
-console.log(school.includes("Ade"));
-console.log(school.endsWith("Osogbo."));
+// console.log(school.search());
+// console.log(school.includes("Ade"));
+// console.log(school.endsWith("Osogbo."));
 
-// STRING TEMPLATE
-let name = "Ola"
-// let email = `Lorem ipsum dolor sit amet ${name} consectetur adipisicing elit. Eaque optio aliquam aliquid accusantium facere voluptates cum veniam deserunt quidem. Tempore id vero culpa! Rerum eum, nihil molestiae assumenda inventore ex!`;
-let email = "Lorem ipsum dolor sit amet ${name} consectetur adipisicing elit. Eaque optio aliquam aliquid accusantium facere voluptates cum veniam deserunt quidem. Tempore id vero culpa! Rerum eum, nihil molestiae assumenda inventore ex!";
-console.log(email);
+// // STRING TEMPLATE
+// let name = "Ola"
+// // let email = `Lorem ipsum dolor sit amet ${name} consectetur adipisicing elit. Eaque optio aliquam aliquid accusantium facere voluptates cum veniam deserunt quidem. Tempore id vero culpa! Rerum eum, nihil molestiae assumenda inventore ex!`;
+// let email = "Lorem ipsum dolor sit amet ${name} consectetur adipisicing elit. Eaque optio aliquam aliquid accusantium facere voluptates cum veniam deserunt quidem. Tempore id vero culpa! Rerum eum, nihil molestiae assumenda inventore ex!";
+// console.log(email);
 
-let num = "081232323232"
-let res = Number(num);
-console.log(typeof res);
-let point = 23.56
-console.log(point.toString());
-console.log(point.toFixed(0));
-console.log(parseFloat(num));
-console.log(parseFloat("12"));
+// let num = "081232323232"
+// let res = Number(num);
+// console.log(typeof res);
+// let point = 23.56
+// console.log(point.toString());
+// console.log(point.toFixed(0));
+// console.log(parseFloat(num));
+// console.log(parseFloat("12"));
 
-let age = 45
-if(age < 17) {
-  console.log("You are not eligible to vote");
-}  else {
-  console.log("You are eligible");
-}
-let score = 70
-if(score >= 70) {
-  console.log("Your grade is A");
-} else if(score >= 60) {
-  console.log("Your grade is B");
-} else {
-  console.log("Failed");
+// let age = 45
+// if(age < 17) {
+//   console.log("You are not eligible to vote");
+// }  else {
+//   console.log("You are eligible");
+// }
+// let score = 70
+// if(score >= 70) {
+//   console.log("Your grade is A");
+// } else if(score >= 60) {
+//   console.log("Your grade is B");
+// } else {
+//   console.log("Failed");
   
-}
+// }
 
 
-// FORM VALIDATION
-let emailInput = document.getElementById("email")
-let result = document.getElementById("res");
-function registration() {
-//  if((emailInput.value).includes("@") && (emailInput.value).includes(".") ){
-//     result.innerHTML = "Valid email"
-//     result.style.color = "green"
-//  } else {
+// // FORM VALIDATION
+// let emailInput = document.getElementById("email")
+// let result = document.getElementById("res");
+// function registration() {
+// //  if((emailInput.value).includes("@") && (emailInput.value).includes(".") ){
+// //     result.innerHTML = "Valid email"
+// //     result.style.color = "green"
+// //  } else {
+// //   result.innerHTML = "Invalid email"
+// //   result.style.color = "red"
+// //  }
+
+// // REGEX FOR EMAIL VALIDATION
+// const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// let req = regex.test(emailInput.value)
+// if(req) {
+//   result.innerHTML = "Valid email"
+// } else {
 //   result.innerHTML = "Invalid email"
-//   result.style.color = "red"
-//  }
+// }
+// }
 
-// REGEX FOR EMAIL VALIDATION
-const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-let req = regex.test(emailInput.value)
-if(req) {
-  result.innerHTML = "Valid email"
-} else {
-  result.innerHTML = "Invalid email"
+
+
+// ARRAY METHODS
+// let students = ["Ade", "Dele", "Grace", "John", "Favour"]
+// console.log("Length of the array is: ",students.length);
+// // console.log("Pop method",students.pop());
+// console.log(students.push("Clement"));
+// console.log(students.unshift("Folake"));
+// console.log(students.shift());
+
+// ARRAY SEARCH METHODS
+const numbers = [23,56,67,92,3,7]
+
+
+// function findNum(value, index){
+//   return value < 20
+// }
+// let res = numbers.filter(findNum)
+// console.log(res);
+
+// const fruits = ["Mango", "Orange", "Apple", "Cashew"]
+
+// console.log(fruits.sort());
+
+// console.log(numbers.sort((a,b)=> a - b));
+// console.log(fruits.reverse());
+// console.log(Math.min(2,4,5,6,8,17));
+
+
+
+
+// ARRAY ITERATION METHODS
+// let ans = ""
+// let ages = [23, 56, 67, 92, 3, 7];
+// function showAll(value, index) {
+//   ans += value * 3 + "<br>"
+// }
+// ages.forEach(showAll);
+// console.log(ans );
+
+// let fru = ""
+// function mapFruits(value, index){
+//   fru += value 
+// }
+
+// fruits.map(mapFruits);
+// console.log(fru);
+
+// fruits.map(
+//   (value, index) =>
+//     (fru += `
+
+//        <p>${index + 1}</p>
+//        <p>${value}</p>
+//     `
+//   )
+// );
+// document.getElementById("demo").innerHTML = fru
+  
+//   console.log(fru);
+function totalPrice(total, value, index){
+  return total + value
 }
+let res = numbers.reduce(totalPrice)
+console.log(res);
 
+const weights = [45, 4, 9, 16, 25];
+let allOver18 = weights.some(myFunction);
 
+function myFunction(value, index, array) {
+  return value > 18;
 }
-
-
-
-
-
-
-
-
+console.log(allOver18);
 
