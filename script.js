@@ -226,17 +226,30 @@ const numbers = [23,56,67,92,3,7]
 // document.getElementById("demo").innerHTML = fru
   
 //   console.log(fru);
-function totalPrice(total, value, index){
-  return total + value
-}
-let res = numbers.reduce(totalPrice)
-console.log(res);
+// function totalPrice(total, value, index){
+//   return total + value
+// }
+// let res = numbers.reduce(totalPrice)
+// console.log(res);
 
-const weights = [45, 4, 9, 16, 25];
-let allOver18 = weights.some(myFunction);
+// const weights = [45, 4, 9, 16, 25];
+// let allOver18 = weights.some(myFunction);
 
-function myFunction(value, index, array) {
-  return value > 18;
-}
-console.log(allOver18);
+// function myFunction(value, index, array) {
+//   return value > 18;
+// }
+// console.log(allOver18);
+
+const today = new Date()
+
+console.log("Today's date: ", today);
+console.log("Get hour: ", today.getHours());
+console.log(today.setDate(18));
+
+const randomNum = Math.floor(Math.random() * 100)
+console.log(randomNum);
+
+
+
+
 
