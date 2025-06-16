@@ -29,7 +29,6 @@
 // a > 4 ? console.log("Good") : console.log("false");
 // console.log(typeof c);
 
-
 // FUNCTION
 // let f = 7
 // let g = 5
@@ -102,7 +101,6 @@
 // console.log(novel.repeat(2));
 // console.log(novel.at(10));
 
-
 // // STRING SEARCH METHOD
 // let school = "Uniosun is a university in Osogbo. It is located at Osogbo."
 // console.log(school.indexOf("is"));
@@ -140,9 +138,8 @@
 //   console.log("Your grade is B");
 // } else {
 //   console.log("Failed");
-  
-// }
 
+// }
 
 // // FORM VALIDATION
 // let emailInput = document.getElementById("email")
@@ -166,8 +163,6 @@
 // }
 // }
 
-
-
 // ARRAY METHODS
 // let students = ["Ade", "Dele", "Grace", "John", "Favour"]
 // console.log("Length of the array is: ",students.length);
@@ -177,8 +172,7 @@
 // console.log(students.shift());
 
 // ARRAY SEARCH METHODS
-const numbers = [23,56,67,92,3,7]
-
+const numbers = [23, 56, 67, 92, 3, 7];
 
 // function findNum(value, index){
 //   return value < 20
@@ -194,9 +188,6 @@ const numbers = [23,56,67,92,3,7]
 // console.log(fruits.reverse());
 // console.log(Math.min(2,4,5,6,8,17));
 
-
-
-
 // ARRAY ITERATION METHODS
 // let ans = ""
 // let ages = [23, 56, 67, 92, 3, 7];
@@ -208,7 +199,7 @@ const numbers = [23,56,67,92,3,7]
 
 // let fru = ""
 // function mapFruits(value, index){
-//   fru += value 
+//   fru += value
 // }
 
 // fruits.map(mapFruits);
@@ -224,7 +215,7 @@ const numbers = [23,56,67,92,3,7]
 //   )
 // );
 // document.getElementById("demo").innerHTML = fru
-  
+
 //   console.log(fru);
 // function totalPrice(total, value, index){
 //   return total + value
@@ -240,16 +231,54 @@ const numbers = [23,56,67,92,3,7]
 // }
 // console.log(allOver18);
 
-const today = new Date()
+// const today = new Date()
 
-console.log("Today's date: ", today);
-console.log("Get hour: ", today.getHours());
-console.log(today.setDate(18));
+// console.log("Today's date: ", today);
+// console.log("Get hour: ", today.getHours());
+// console.log(today.setDate(18));
 
-const randomNum = Math.floor(Math.random() * 100)
-console.log(randomNum);
-
-
+// const randomNum = Math.floor(Math.random() * 100)
+// console.log(randomNum);
 
 
 
+// FOR LOOP
+const names = ["Grace", "Deola", "Happiness", "John", "Tade"];
+
+for (let i = 0; i < names.length; i++) {
+  console.log(names[i]);
+}
+let text = "";
+for (let i = 1; i < 101; i++) {
+  text += i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+
+
+for(let i = 1; i < 100; i++) {
+    if(i % 2 == 0) {
+        console.log(`${i} is an even number.`);
+    } else {
+        console.log(`${i} is an odd number.`); 
+    }
+}
+
+const novel = {name: "Rich dad, poor dad", price: "#500", author:"Luther", edition: "2nd"}
+for (const key in novel) {
+   console.log(novel[key]);
+}
+
+for (const i of names) {
+    console.log(names);
+}
+let m = 0;
+while (m < 50) {
+  console.log("Number: ",m);
+    m++
+}
+
+let k = 2;
+do {
+    console.log(k); 
+    k++
+} while (k < 20);
