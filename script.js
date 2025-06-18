@@ -240,45 +240,65 @@ const numbers = [23, 56, 67, 92, 3, 7];
 // const randomNum = Math.floor(Math.random() * 100)
 // console.log(randomNum);
 
-
-
 // FOR LOOP
-const names = ["Grace", "Deola", "Happiness", "John", "Tade"];
+// const names = ["Grace", "Deola", "Happiness", "John", "Tade"];
 
-for (let i = 0; i < names.length; i++) {
-  console.log(names[i]);
-}
-let text = "";
-for (let i = 1; i < 101; i++) {
-  text += i + "<br>";
-}
-document.getElementById("demo").innerHTML = text;
+// for (let i = 0; i < names.length; i++) {
+//   console.log(names[i]);
+// }
+// let text = "";
+// for (let i = 1; i < 101; i++) {
+//   text += i + "<br>";
+// }
+// document.getElementById("demo").innerHTML = text;
 
+// for(let i = 1; i < 100; i++) {
+//     if(i % 2 == 0) {
+//         console.log(`${i} is an even number.`);
+//     } else {
+//         console.log(`${i} is an odd number.`);
+//     }
+// }
 
-for(let i = 1; i < 100; i++) {
-    if(i % 2 == 0) {
-        console.log(`${i} is an even number.`);
-    } else {
-        console.log(`${i} is an odd number.`); 
-    }
-}
+// const novel = {name: "Rich dad, poor dad", price: "#500", author:"Luther", edition: "2nd"}
+// for (const key in novel) {
+//    console.log(novel[key]);
+// }
 
-const novel = {name: "Rich dad, poor dad", price: "#500", author:"Luther", edition: "2nd"}
-for (const key in novel) {
-   console.log(novel[key]);
-}
+// for (const i of names) {
+//     console.log(names);
+// }
+// let m = 0;
+// while (m < 50) {
+//   console.log("Number: ",m);
+//     m++
+// }
 
-for (const i of names) {
-    console.log(names);
-}
-let m = 0;
-while (m < 50) {
-  console.log("Number: ",m);
-    m++
-}
+// let k = 2;
+// do {
+//     console.log(k);
+//     k++
+// } while (k < 20);
 
-let k = 2;
-do {
-    console.log(k); 
-    k++
-} while (k < 20);
+let x = 6;
+let z = 8;
+console.log("Answer: ", x + z);
+
+// function read() {
+//   let a = "Buddy"
+//   alert(`Today is Tuesday . ${a}`)
+// }
+// read()
+
+// ERROR HANDLING
+function calculate() {
+  try {
+    b = x + 1;
+    document.getElementById("demo").innerHTML = b;
+  } catch (err) {
+    document.getElementById("demo").innerHTML = err.name;
+  } finally {
+    
+  }
+}
+calculate()
