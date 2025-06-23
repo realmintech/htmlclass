@@ -291,14 +291,43 @@ console.log("Answer: ", x + z);
 // read()
 
 // ERROR HANDLING
-function calculate() {
-  try {
-    b = x + 1;
-    document.getElementById("demo").innerHTML = b;
-  } catch (err) {
-    document.getElementById("demo").innerHTML = err.name;
-  } finally {
+// function calculate() {
+//   try {
+//     b = x + 1;
+//     document.getElementById("demo").innerHTML = b;
+//   } catch (err) {
+//     document.getElementById("demo").innerHTML = err.name;
+//   } finally {
+
+//   }
+// }
+// calculate()
+
+// JAVASCRIPT ASYNCHRONOUS FUNCTION
+// let msg = document.getElementById("alertMsg")
+// function message() {
+//   msg.innerHTML = "You have successfully added this product to cart....";
+
+// }
+
+// setInterval(() => {
+//   message()
+// }, 3000);
+
+// API INTEGRATION USING THE FETCH METHOD
+let url = "https://dummyjson.com/products";
+let product = document.getElementById("product");
+let text = "";
+fetch(url)
+  .then((res) => res.json())
+  .then((data) => {
+    for (let i = 0; i < data.products.length; i++) {
+      text += `
+     <p>${data.products[i].title}</p>
+     <img src=${data.products[i].images[0]} alt=${data.products[i].brand} />
     
-  }
-}
-calculate()
+    `
+    console.log(data);
+    product.innerHTML = text;
+    }
+  });
