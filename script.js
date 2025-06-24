@@ -315,19 +315,37 @@ console.log("Answer: ", x + z);
 // }, 3000);
 
 // API INTEGRATION USING THE FETCH METHOD
-let url = "https://dummyjson.com/products";
-let product = document.getElementById("product");
-let text = "";
-fetch(url)
+// let url = "https://dummyjson.com/products";
+// let product = document.getElementById("product");
+// let text = "";
+// fetch(url)
+//   .then((res) => res.json())
+//   .then((data) => {
+//     for (let i = 0; i < data.products.length; i++) {
+//       text += `
+//      <p>${data.products[i].title}</p>
+//      <img src=${data.products[i].images[0]} alt=${data.products[i].brand} />
+    
+//     `
+//     console.log(data);
+//     product.innerHTML = text;
+//     }
+//   });
+let table = ''
+fetch("https://randomuser.me/api/?results=100")
   .then((res) => res.json())
   .then((data) => {
-    for (let i = 0; i < data.products.length; i++) {
-      text += `
-     <p>${data.products[i].title}</p>
-     <img src=${data.products[i].images[0]} alt=${data.products[i].brand} />
-    
-    `
-    console.log(data);
-    product.innerHTML = text;
+    for(let i = 0; i < data.results.length; i++) {
+     table += `
+      <tr>
+        <td>${data.results[i].id.value}</td>
+        <td>${data.results[i].name.first}</td>
+        <td>${data.results[i].email}</td>
+        <td><img src=${data.results[i].picture.medium} alt="" /></td>
+        <td>${data.results[i].phone}</td>
+      </tr>
+      `
     }
+    document.getElementById("randomUsers").innerHTML = table
+    console.log(data.results[0]);
   });
