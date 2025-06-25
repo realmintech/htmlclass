@@ -331,21 +331,91 @@ console.log("Answer: ", x + z);
 //     product.innerHTML = text;
 //     }
 //   });
-let table = ''
-fetch("https://randomuser.me/api/?results=100")
-  .then((res) => res.json())
-  .then((data) => {
-    for(let i = 0; i < data.results.length; i++) {
-     table += `
-      <tr>
-        <td>${data.results[i].id.value}</td>
-        <td>${data.results[i].name.first}</td>
-        <td>${data.results[i].email}</td>
-        <td><img src=${data.results[i].picture.medium} alt="" /></td>
-        <td>${data.results[i].phone}</td>
-      </tr>
-      `
-    }
-    document.getElementById("randomUsers").innerHTML = table
-    console.log(data.results[0]);
-  });
+// let table = ''
+// fetch("https://randomuser.me/api/?results=100")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     for(let i = 0; i < data.results.length; i++) {
+//      table += `
+//       <tr>
+//         <td>${data.results[i].id.value}</td>
+//         <td>${data.results[i].name.first}</td>
+//         <td>${data.results[i].email}</td>
+//         <td><img src=${data.results[i].picture.medium} alt="" /></td>
+//         <td>${data.results[i].phone}</td>
+//       </tr>
+//       `
+//     }
+//     document.getElementById("randomUsers").innerHTML = table
+//     console.log(data.results[0]);
+//   });
+
+
+// ASYNC/AWAIT
+// const url = "https://randomuser.me/api/?results=100";
+// let text;
+// async function fetchData() {
+//  try {
+//   const res = await fetch(url);
+//   const data = await res.json();
+//   for(let i = 0; i < data.results.length; i++){
+//     text += `
+//     <p>${data.results[i].name.first}</p>
+//     <img src=${data.results[i].picture.medium} />
+//     `
+//   }
+//   document.querySelector(".randomUsers").innerHTML = text;
+//   console.log(data);
+//  } catch (error) {
+//   console.log(error);
+  
+//  }
+  
+// }
+// fetchData()
+
+
+// function storeData() {
+//   const details = ["Mariam", 12, true, "OICHUB"]
+//   const detail = ["Eniife", 15, false, "OICHUB"];
+//   localStorage.setItem("Mariam", details)
+//   localStorage.setItem("Eniife", detail);
+//   let result = localStorage.getItem("Mariam")
+//   // localStorage.removeItem("Mariam")
+// localStorage.clear()
+//   console.log(result);
+  
+// }
+// storeData()
+const data = [
+  {
+    icon: "💻",
+    heading: "Digital Products",
+    desc: "Sell any and every kind of digital product, from content packs to designs to bundles and more without stress.",
+  },
+  {
+    icon: "📦",
+    heading: "Physical Products",
+    desc: "Ship and sell your own physical products with ease.",
+  },
+  {
+    icon: "🎓",
+    heading: "Online Courses",
+    desc: "Teach and sell online courses easily on your platform.",
+  },
+];
+
+let products = data
+  .map(
+    (item) => `
+  <div>
+    <p>${item.icon}</p>
+    <h3>${item.heading}</h3>
+    <p>${item.desc}</p>
+  </div>`
+  )
+  .join(""); // Join all HTML strings together
+
+document.getElementById("demo").innerHTML = products;
+
+
