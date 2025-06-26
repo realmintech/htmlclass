@@ -419,3 +419,17 @@ let products = data
 document.getElementById("demo").innerHTML = products;
 
 
+function addToCart(x) {
+  // let img = x.parentNode.previousElementSibling.previousElementSibling.src;
+  // let desc = x.previousElementSibling.innerHTML 
+  let title =
+    x.nextElementSibling.nextElementSibling.nextElementSibling.childNodes[1]
+      .innerHTML;
+  // let localValue = []
+  // localValue.push(img,desc)
+  console.log(title);
+  
+  // localStorage.setItem(title, JSON.stringify(localValue))
+}
+
+
